@@ -9,6 +9,7 @@ import { SearchItemComponent } from './components/search-item/search-item.compon
 import { SearchBarComponent } from './components/header/search-bar/search-bar.component';
 import { SortBarComponent } from './components/header/sort-bar/sort-bar.component';
 import { ProfileComponent } from './components/header/profile/profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProfileComponent } from './components/header/profile/profile.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
