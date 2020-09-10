@@ -1,14 +1,14 @@
-class Thumbnail {
-  public url: string;
-  public width: number;
-  public height: number;
+interface Thumbnail {
+  url: string;
+  width: number;
+  height: number;
 }
 
-export class SearchItem {
-  public kind: string;
-  public etag: string;
-  public id: string;
-  public snippet: {
+export interface SearchItem {
+  kind: string;
+  etag: string;
+  id: string;
+  snippet: {
     publishedAt: Date,
     channelId: string,
     title: string,
@@ -30,7 +30,7 @@ export class SearchItem {
     },
     defaultAudioLanguage: string
   };
-  public statistics: {
+  statistics: {
     viewCount: number,
     likeCount: number,
     dislikeCount: number,
