@@ -9,7 +9,7 @@ export interface SearchItem {
   etag: string;
   id: string;
   snippet: {
-    publishedAt: Date,
+    publishedAt: string,
     channelId: string,
     title: string,
     description: string,
@@ -31,10 +31,10 @@ export interface SearchItem {
     defaultAudioLanguage: string
   };
   statistics: {
-    viewCount: number,
-    likeCount: number,
-    dislikeCount: number,
-    favoriteCount: number,
-    commentCount: number
+    viewCount: string,
+    likeCount: string,
+    dislikeCount: string,
+    favoriteCount: string,
+    commentCount: string
   };
 }

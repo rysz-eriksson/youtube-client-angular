@@ -1,1 +1,14 @@
-<p>search-item works!</p>
+<div>
+  <img
+  [src]="item.snippet.thumbnails.medium.url"
+  [alt]="item.snippet.title"
+  />
+  <div>
+    <span>{{ item.statistics.viewCount }}</span>
+    <span>{{ item.statistics.likeCount }}</span>
+    <span>{{ item.statistics.dislikeCount }}</span>
+    <span>{{ item.statistics.commentCount }}</span>
+  </div>
+  <h2>{{item.snippet.title}}</h2>
+  <button type="button">More...</button>
+</div>
