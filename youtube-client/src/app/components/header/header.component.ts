@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
 
   public onSubmitSearch() {
     this.searchResult.emit(this.searchTerm);
-    console.log(this.searchTerm);
   }
 
 }
