@@ -10,6 +10,7 @@ import { SearchBarComponent } from './components/header/search-bar/search-bar.co
 import { SortBarComponent } from './components/header/sort-bar/sort-bar.component';
 import { ProfileComponent } from './components/header/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PublicationMark } from './directives/publication-mark.directive';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SearchItemComponent,
     SearchBarComponent,
     SortBarComponent,
-    ProfileComponent
+    ProfileComponent,
+    PublicationMark
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

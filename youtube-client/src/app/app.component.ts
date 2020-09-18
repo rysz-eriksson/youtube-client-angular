@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'youtube-client';
+  // tslint:disable-next-line:typedef
+  public title = 'youtube-client';
 }

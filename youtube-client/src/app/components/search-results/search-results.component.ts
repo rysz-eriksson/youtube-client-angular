@@ -11,7 +11,7 @@ export class SearchResultsComponent implements OnInit {
   public searchResults: SearchItem[] = [...results];
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

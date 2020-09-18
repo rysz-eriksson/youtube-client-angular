@@ -8,10 +8,11 @@ import { SearchItem } from 'src/app/models/search-item.model';
 })
 export class SearchItemComponent implements OnInit {
   @Input() public item: SearchItem;
+  @Input() public date: string;
 
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

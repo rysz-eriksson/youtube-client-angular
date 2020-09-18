@@ -2,5 +2,6 @@
   <app-search-item
   *ngFor="let searchItem of searchResults"
   [item]="searchItem"
+  [date]="searchItem.snippet.publishedAt"
   ></app-search-item>
 </main>

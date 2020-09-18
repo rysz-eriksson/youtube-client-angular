@@ -1,4 +1,4 @@
-<div>
+<div publicationMark [appDate]="item.snippet.publishedAt">
   <img
   [src]="item.snippet.thumbnails.medium.url"
   [alt]="item.snippet.title"
@@ -11,4 +11,5 @@
   </div>
   <h2>{{item.snippet.title}}</h2>
   <button type="button">More...</button>
+  <p>{{item.snippet.publishedAt}}</p>
 </div>
