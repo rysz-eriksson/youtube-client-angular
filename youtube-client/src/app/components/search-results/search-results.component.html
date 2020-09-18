@@ -1,6 +1,7 @@
 <main>
+  <p>{{ filtered }}</p>
   <app-search-item
-  *ngFor="let searchItem of searchResults"
+  *ngFor="let searchItem of searchResults | filter:filtered"
   [item]="searchItem"
   [date]="searchItem.snippet.publishedAt"
   ></app-search-item>

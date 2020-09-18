@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SearchItem } from 'src/app/models/search-item.model';
 import { results } from './search-results-data';
 
@@ -9,6 +9,7 @@ import { results } from './search-results-data';
 })
 export class SearchResultsComponent implements OnInit {
   public searchResults: SearchItem[] = [...results];
+  @Input() public filtered: string;
   constructor() { }
 
   public ngOnInit(): void {

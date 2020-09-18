@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // tslint:disable-next-line:typedef
   public title = 'youtube-client';
+  public filteredResult: string;
 }

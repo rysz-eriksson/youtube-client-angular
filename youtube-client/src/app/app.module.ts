@@ -11,6 +11,8 @@ import { SortBarComponent } from './components/header/sort-bar/sort-bar.componen
 import { ProfileComponent } from './components/header/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PublicationMark } from './directives/publication-mark.directive';
+import { FilterPipe } from './components/search-results/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { PublicationMark } from './directives/publication-mark.directive';
     SearchBarComponent,
     SortBarComponent,
     ProfileComponent,
-    PublicationMark
+    PublicationMark,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

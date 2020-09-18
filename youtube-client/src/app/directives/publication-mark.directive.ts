@@ -8,7 +8,7 @@ export class PublicationMark implements OnInit {
 
   constructor(private element: ElementRef) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.changeBorderColor();
   }
 
@@ -17,7 +17,6 @@ export class PublicationMark implements OnInit {
     const then: Date = new Date(this.date);
     const thenInMs: number = then.getTime();
     const difference: number = now - thenInMs;
-    console.log(now, then, thenInMs, difference);
     if (difference < 604800000) {
       this.element.nativeElement.style.borderBottomColor = 'blue';
     } else if (difference > 604800000 && difference < 2592000000) {
