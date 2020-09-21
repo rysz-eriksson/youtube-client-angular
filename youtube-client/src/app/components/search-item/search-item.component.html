@@ -1,15 +1,19 @@
-<div publicationMark [appDate]="item.snippet.publishedAt">
-  <img
-  [src]="item.snippet.thumbnails.medium.url"
-  [alt]="item.snippet.title"
-  />
-  <div>
-    <span>{{ item.statistics.viewCount }}</span>
-    <span>{{ item.statistics.likeCount }}</span>
-    <span>{{ item.statistics.dislikeCount }}</span>
-    <span>{{ item.statistics.commentCount }}</span>
-  </div>
-  <h2>{{item.snippet.title}}</h2>
-  <button type="button">More...</button>
-  <p>{{item.snippet.publishedAt}}</p>
-</div>
+<mat-card publicationMark [appDate]="item.snippet.publishedAt">
+  <section>
+    <img mat-card-image
+    [src]="item.snippet.thumbnails.medium.url"
+    [alt]="item.snippet.title"
+    />
+    <div>
+      <span>{{ item.statistics.viewCount }}</span>
+      <span>{{ item.statistics.likeCount }}</span>
+      <span>{{ item.statistics.dislikeCount }}</span>
+      <span>{{ item.statistics.commentCount }}</span>
+    </div>
+    <mat-card-title>{{item.snippet.title}}</mat-card-title>
+  </section>
+
+  <mat-card-actions>
+    <button type="button">More...</button>
+  </mat-card-actions>
+</mat-card>

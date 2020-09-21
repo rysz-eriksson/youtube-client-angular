@@ -1,5 +1,4 @@
 <main>
-  <p>{{ filtered }}</p>
   <app-search-item
   *ngFor="let searchItem of searchResults | filter:filtered| sort:sorted"
   [item]="searchItem"

@@ -14,6 +14,11 @@ import { PublicationMark } from './directives/publication-mark.directive';
 import { FilterPipe } from './components/search-results/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { SortPipe } from './components/search-results/sort.pipe';
+import { SearchListComponent } from './components/search-list/search-list.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -26,13 +31,18 @@ import { SortPipe } from './components/search-results/sort.pipe';
     ProfileComponent,
     PublicationMark,
     FilterPipe,
-    SortPipe
+    SortPipe,
+    SearchListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

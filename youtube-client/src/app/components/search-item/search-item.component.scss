@@ -1,6 +1,15 @@
-div {
+mat-card {
+  width: 240px;
+  height: 360px;
   border-bottom: 4px solid pink;
+  flex: 1 1 auto;
+  background-color: #f4f4f4;
+  margin: 10px;
+  section {
+    margin: 20px;
+  }
 }
+
 
 span {
   margin: 0 5px;
