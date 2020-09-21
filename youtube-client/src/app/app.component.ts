@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SortResult } from './models/sort-result.model';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,5 @@ export class AppComponent {
   // tslint:disable-next-line:typedef
   public title = 'youtube-client';
   public filteredResult: string;
+  public sortedResult: SortResult;
 }

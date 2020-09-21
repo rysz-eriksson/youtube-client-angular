@@ -1,5 +1,15 @@
-  <form>
-    <input type="text"  [(ngModel)]="searchTerm" name="searchTerm"/>
-    <button type="submit" (click)="onSubmitSearch()">Search</button>
-  </form>
+<header>
+  <h1>LOGO</h1>
+  <app-search-bar
+  (searchResult)="onSearchResult($event)"
+  ></app-search-bar>
+  <button
+  type="button"
+  (click)="this.optionsOn = !this.optionsOn"
+  >Options</button>
+  <app-sort-bar
+  *ngIf="this.optionsOn"
+  (sortCriteria)="onSort($event)"
+  ></app-sort-bar>
+</header>
 

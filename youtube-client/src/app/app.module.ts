@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PublicationMark } from './directives/publication-mark.directive';
 import { FilterPipe } from './components/search-results/filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { SortPipe } from './components/search-results/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     SortBarComponent,
     ProfileComponent,
     PublicationMark,
-    FilterPipe
+    FilterPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
