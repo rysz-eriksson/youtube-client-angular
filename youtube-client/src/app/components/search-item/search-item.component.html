@@ -4,16 +4,27 @@
     [src]="item.snippet.thumbnails.medium.url"
     [alt]="item.snippet.title"
     />
-    <div>
-      <span>{{ item.statistics.viewCount }}</span>
-      <span>{{ item.statistics.likeCount }}</span>
-      <span>{{ item.statistics.dislikeCount }}</span>
-      <span>{{ item.statistics.commentCount }}</span>
+    <div class="stats-container">
+      <div>
+        <mat-icon md-18>visibility</mat-icon>
+        <span>{{ item.statistics.viewCount }}</span>
+      </div>
+      <div>
+        <mat-icon>thumb_up_alt</mat-icon>
+        <span>{{ item.statistics.likeCount }}</span>
+      </div>
+      <div>
+        <mat-icon>thumb_down_alt</mat-icon>
+        <span>{{ item.statistics.dislikeCount }}</span>
+      </div>
+      <div>
+        <mat-icon>question_answer</mat-icon>
+        <span>{{ item.statistics.commentCount }}</span>
+      </div>
     </div>
     <mat-card-title>{{item.snippet.title}}</mat-card-title>
   </section>
-
-  <mat-card-actions>
-    <button type="button">More...</button>
-  </mat-card-actions>
+  <footer>
+    <button mat-raised-button color="primary" type="button">More...</button>
+  </footer>
 </mat-card>
