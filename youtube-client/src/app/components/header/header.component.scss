@@ -1,0 +1,27 @@
+header {
+  width: 100%;
+  background-color: #E5E5E5;
+}
+
+section {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    img {
+      width: 75px;
+    }
+  }
+}
+
+button {
+  line-height: 25px;
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 32px;
+  margin-left: 10px;
+}

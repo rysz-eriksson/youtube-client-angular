@@ -1,15 +1,20 @@
 <header>
-  <h1>LOGO</h1>
-  <app-search-bar
-  (searchResult)="onSearchResult($event)"
-  ></app-search-bar>
-  <button
-  type="button"
-  (click)="this.optionsOn = !this.optionsOn"
-  >Options</button>
-  <app-sort-bar
-  *ngIf="this.optionsOn"
-  (sortCriteria)="onSort($event)"
-  ></app-sort-bar>
+  <section>
+    <div>
+      <img src="assets/YouTube-Icon-Black.svg" />
+      <app-search-bar
+      (searchResult)="onSearchResult($event)"
+      ></app-search-bar>
+      <button
+      type="button"
+      mat-raised-button color="primary"
+      (click)="this.optionsOn = !this.optionsOn"
+      ><mat-icon>tune</mat-icon></button>
+    </div>
+    <app-sort-bar
+    *ngIf="this.optionsOn"
+    (sortCriteria)="onSort($event)"
+    ></app-sort-bar>
+  </section>
 </header>
 

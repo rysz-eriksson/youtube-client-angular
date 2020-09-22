@@ -1,4 +1,7 @@
 <form>
   <input type="text"  [(ngModel)]="searchTerm" name="searchTerm"/>
-  <button type="submit" (click)="onSubmitSearch()">Search</button>
+  <button type="submit"
+  mat-raised-button color="primary"
+  (click)="onSubmitSearch()"
+   >Search</button>
 </form>
