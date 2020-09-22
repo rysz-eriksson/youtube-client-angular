@@ -6,7 +6,7 @@ import { SearchItem } from 'src/app/models/search-item.model';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: SearchItem[], filterTerm: string): unknown {
+  public transform(value: SearchItem[], filterTerm: string): SearchItem[]  {
     if (!filterTerm) {
       return;
     }

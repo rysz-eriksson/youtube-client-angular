@@ -10,9 +10,9 @@ export class SearchBarComponent implements OnInit {
   public searchTerm: string = '';
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
-  public onSubmitSearch() {
+  public onSubmitSearch(): void {
     this.searchResult.emit(this.searchTerm);
   }
 

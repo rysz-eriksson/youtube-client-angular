@@ -743,4 +743,4 @@ export const results: SearchItem[] = [
       'commentCount': '128'
     }
   }
-]
+];

@@ -9,17 +9,17 @@ import { SortResult } from 'src/app/models/sort-result.model';
 export class HeaderComponent implements OnInit {
   @Output() public searchResult = new EventEmitter<string>();
   @Output() public sortResult = new EventEmitter<SortResult>();
-  optionsOn = false;
+  public optionsOn: boolean = false;
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
-  onSearchResult(filterValue: string) {
+  public onSearchResult(filterValue: string): void {
     this.searchResult.emit(filterValue);
   }
 
-  onSort(result: SortResult) {
+  public onSort(result: SortResult): void {
     this.sortResult.emit(result);
   }
 }

@@ -9,13 +9,13 @@ import { SortResult } from 'src/app/models/sort-result.model';
 export class SortBarComponent implements OnInit {
   @Output() public sortCriteria = new EventEmitter<SortResult>();
   public criteria: string  = 'word';
-  public asc: boolean = false
+  public asc: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public onSelect(value: string) {
+  public onSelect(value: string): void {
     if (this.criteria === value) {
       this.asc = !this.asc;
     } else {

@@ -7,7 +7,7 @@ import { SortResult } from 'src/app/models/sort-result.model';
 })
 export class SortPipe implements PipeTransform {
 
-  transform(value: SearchItem[], sortProperty: SortResult): unknown {
+  public transform(value: SearchItem[], sortProperty: SortResult): SearchItem[] {
     if (!value) {
       return;
     }
@@ -20,7 +20,7 @@ export class SortPipe implements PipeTransform {
         return value.sort((a, b) => {
           return Number(new Date(a[propArray[0]][propArray[1]])) -
           Number(new Date(b[propArray[0]][propArray[1]]));
-        })
+        });
       } else {
         return value.sort((a, b) => {
           return Number(new Date(b[propArray[0]][propArray[1]])) -
