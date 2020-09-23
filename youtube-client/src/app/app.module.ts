@@ -8,7 +8,6 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 import { SearchItemComponent } from './components/search-item/search-item.component';
 import { SearchBarComponent } from './components/header/search-bar/search-bar.component';
 import { SortBarComponent } from './components/header/sort-bar/sort-bar.component';
-import { ProfileComponent } from './components/header/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PublicationMark } from './directives/publication-mark.directive';
 import { FilterPipe } from './components/search-results/filter.pipe';
@@ -27,7 +26,6 @@ import { LayoutModule } from '@angular/cdk/layout';
     SearchItemComponent,
     SearchBarComponent,
     SortBarComponent,
-    ProfileComponent,
     PublicationMark,
     FilterPipe,
     SortPipe,
