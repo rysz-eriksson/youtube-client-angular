@@ -1,0 +1,13 @@
+input {
+  padding: 5px;
+  width: 250px;
+  background-color: #f4f4f4;
+  border-width: 0;
+  &:focus {
+    outline-color: #3f51b5;
+  }
+}
+
+button {
+  line-height: 25px;
+}
