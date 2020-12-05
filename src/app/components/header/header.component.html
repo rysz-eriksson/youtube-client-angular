@@ -3,23 +3,23 @@
     <section>
       <div>
         <img src="assets/YouTube-Icon-Black.svg" />
-        <app-search-bar
-        (searchResult)="onSearchResult($event)"
-        ></app-search-bar>
+        <app-search-bar></app-search-bar>
         <button
-        type="button"
-        mat-raised-button color="primary"
-        (click)="this.optionsOn = !this.optionsOn"
-        ><mat-icon>tune</mat-icon></button>
+          (click)="this.optionsOn = !this.optionsOn"
+          mat-raised-button color="primary"
+          type="button"
+        >
+          <mat-icon>tune</mat-icon></button>
       </div>
-      <app-sort-bar
-      *ngIf="this.optionsOn"
-      (sortCriteria)="onSort($event)"
-      ></app-sort-bar>
+      <app-sort-bar *ngIf="this.optionsOn"></app-sort-bar>
     </section>
     <section>
-      <span>Your name</span>
-      <mat-icon>account_box</mat-icon>
+      <span>
+        Your name
+      </span>
+      <mat-icon>
+        account_box
+      </mat-icon>
     </section>
   </div>
 </header>

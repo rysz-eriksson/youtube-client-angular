@@ -7,16 +7,11 @@ import { SortResult } from 'src/app/models/sort-result.model';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Output() public searchResult = new EventEmitter<string>();
   @Output() public sortResult = new EventEmitter<SortResult>();
   public optionsOn: boolean = false;
   constructor() { }
 
   public ngOnInit(): void {
-  }
-
-  public onSearchResult(filterValue: string): void {
-    this.searchResult.emit(filterValue);
   }
 
   public onSort(result: SortResult): void {
