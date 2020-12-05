@@ -5,17 +5,11 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class SearchService {
-  private searchResult: string;
-  public updatedResult: Subject<string> = new Subject();
+  public result: Subject<string> = new Subject();
 
   constructor() { }
 
-  public getResult(): string {
-    return this.searchResult;
-  }
-
   public updateResult(result: string): void {
-    this.searchResult = result;
-    this.updatedResult.next();
+    this.result.next(result);
   }
 }

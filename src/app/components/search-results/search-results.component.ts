@@ -22,10 +22,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
   constructor(private searchService: SearchService) { }
 
   public ngOnInit(): void {
-    this.filtered = this.searchService.getResult();
-    this.searchSubscription = this.searchService.updatedResult.subscribe(() => {
-      this.filtered = this.searchService.getResult();
-    });
+    this.searchSubscription = this.searchService.result.subscribe(result => this.filtered = result);
   }
 
   public ngOnDestroy(): void {
