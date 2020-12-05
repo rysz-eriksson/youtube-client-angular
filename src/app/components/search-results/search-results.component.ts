@@ -1,6 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { SearchItem } from 'src/app/models/search-item.model';
 import { SortResult } from 'src/app/models/sort-result.model';
+import { SearchService } from 'src/app/services/search.service';
 import { results } from './search-results-data';
 
 @Component({
@@ -8,13 +10,26 @@ import { results } from './search-results-data';
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.scss']
 })
-export class SearchResultsComponent implements OnInit {
-  public searchResults: SearchItem[] = [...results];
-  @Input() public filtered: string;
+export class SearchResultsComponent implements OnInit, OnDestroy {
+
+  private searchSubscription: Subscription;
+
   @Input() public sorted: SortResult;
-  constructor() { }
+
+  public searchResults: SearchItem[] = [...results];
+  public filtered: string;
+
+  constructor(private searchService: SearchService) { }
 
   public ngOnInit(): void {
+    this.filtered = this.searchService.getResult();
+    this.searchSubscription = this.searchService.updatedResult.subscribe(() => {
+      this.filtered = this.searchService.getResult();
+    });
+  }
+
+  public ngOnDestroy(): void {
+    this.searchSubscription.unsubscribe();
   }
 
 }

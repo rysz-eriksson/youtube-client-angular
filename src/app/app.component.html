@@ -1,8 +1,6 @@
 <app-header
-(searchResult)="filteredResult = $event"
 (sortResult)="sortedResult = $event"
 ></app-header>
 <app-search-results
-  [filtered]="filteredResult"
   [sorted]="sortedResult"
 ></app-search-results>
