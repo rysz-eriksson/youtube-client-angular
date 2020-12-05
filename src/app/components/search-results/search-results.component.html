@@ -1,7 +1,8 @@
 <main>
   <app-search-item
-  *ngFor="let searchItem of searchResults | filter:filtered| sort:sorted"
-  [item]="searchItem"
-  [date]="searchItem.snippet.publishedAt"
-  ></app-search-item>
+    *ngFor="let searchItem of searchResults | filter:filtered| sort:sorted"
+    [item]="searchItem"
+    [date]="searchItem.snippet.publishedAt"
+  >
+  </app-search-item>
 </main>
